@@ -1,0 +1,107 @@
+@use 'modern-normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Poppins:ital,wght@0,400;0,500;1,400;1,500&family=Ubuntu+Mono:wght@400;700&display=swap');
+
+$background-main: #1e1e1e;
+$background-secondary: #000000;
+$brand-main: #ffdd33;
+
+$text-white: #ffffff;
+$text-black: #000000;
+
+$font-handwritten: 'Caveat', cursive;
+$font-main: 'Poppins', sans-serif;
+$font-mono: 'Ubuntu Mono', monospace;
+
+/* Navbar Vars */
+$nav-background: hsla(0, 0%, 10%, 0.3);
+$nav-border: 1px solid hsla(0, 0%, 100%, 0.2);
+
+*, *::before, *::after {
+    color: $text-white;
+    font-family: $font-main;
+}
+
+.nav {
+    width: 100%;
+    min-height: 4rem;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: $nav-background;
+    backdrop-filter: blur(8px);
+    border-bottom: $nav-border;
+
+    display: grid;
+    grid-template-columns: minmax(4rem, 8rem) 1fr auto;
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font-family: $font-mono;
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+    }
+
+    .items {
+        display: flex;
+        flex-direction: row;
+        a {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 0 1rem;
+
+            text-decoration: none;
+            font-family: $font-main;
+            button {
+                padding: 0.2rem 0.6rem;
+                background-color: hsl(0, 0%, 0%, 0);
+                border-width: 0px;
+                border-radius: 9999px;
+                border-style: solid;
+                
+                box-shadow: 0 0 0 hsla(0, 0%, 0%, 0);
+                cursor: pointer;
+
+                transition: background-color 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+            }
+            &:hover button {
+                background-color: hsl(0, 0%, 0%, 1);
+                box-shadow: 0 0 1rem hsla(0, 0%, 0%, 0.5);
+            }
+        }
+    }
+
+    .right {
+        background-color: red;
+        width: auto;
+        height: 2rem;
+    }
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    max-height: 100dvh;
+    
+    display: grid;
+    place-items: center left;
+    padding: 0 10%;
+
+    background: linear-gradient(153deg, rgba(191,76,191,1) 0%, rgba(88,101,242,1) 30%, rgba(124,147,36,1) 43%, rgba(76,181,191,1) 65%);
+
+    .headline {
+        h2 {
+            font-family: $font-mono;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+    }
+}
