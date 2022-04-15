@@ -1,0 +1,17 @@
+.text-reveal {
+    opacity: 0;
+    animation: revealText .5s forwards;
+}
+.text-reveal-2 { animation-delay: .1s; }
+.text-reveal-3 { animation-delay: .2s; }
+.text-reveal-4 { animation-delay: .3s; }
+
+@keyframes revealText {
+    from{
+        transform: translateY(1rem);
+    }
+    to{
+        opacity: 1;
+        transform: none;
+    }
+}
