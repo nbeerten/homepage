@@ -1,0 +1,73 @@
+//! Importing of global variables/settings !//
+@use 'settings' as *;
+
+/* Navbar Vars */
+$nav-background: hsla(0, 0%, 10%, 0.3);
+$nav-border: $border;
+
+.navbar {
+    width: 100%;
+    min-height: 4rem;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    background-color: $nav-background;
+    backdrop-filter: blur(8px);
+    border-bottom: $nav-border;
+
+    display: grid;
+    grid-template-columns: minmax(4rem, calc(10% - 1.6rem)) 1fr;
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font-family: $font-mono;
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+    }
+
+    .items {
+        display: flex;
+        flex-direction: row;
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding: 0 1rem;
+
+            text-decoration: none;
+            font-family: $font-main;
+
+            @media (max-width: 1080px) {
+                padding: 0 0;
+                flex-grow: 1;
+            }
+            button {
+                padding: 0.2rem 0.6rem;
+                background-color: hsla(0, 0%, 0%, 0);
+                border-width: 0px;
+                border-radius: 9999px;
+                border-style: solid;
+                
+                box-shadow: 0 0 0 hsla(0, 0%, 0%, 0);
+                color: $text-white;
+                cursor: pointer;
+
+                transition: background-color 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+            }
+            &:hover button {
+                background-color: hsla(0, 0%, 0%, 1);
+                box-shadow: 0 0 1rem hsla(0, 0%, 0%, 0.5);
+            }
+        }
+    }
+}

@@ -10,7 +10,7 @@
     <title>Homepage Rewrite</title>
 </head>
 <body>
-    <nav class="nav">
+    <nav class="navbar">
         <div class="logo">
             <h1>nb</h1>
         </div>
@@ -26,44 +26,52 @@
             </a>
         </div>
     </nav>
-    <main class="main">
-        <div class="headline">
-            <h2 class="text-reveal text-reveal-1">Hai, I'm nbert.</h2>
-            <p class="text-reveal text-reveal-2">Dutch amateur web developer and resident of the internet<p>
-        </div>
-        <div class="scrollreminder">
-            <span class="mouse">
-                <span class="mouse-wheel"></span>
-            </span>
-            <p>Scroll Down</p>
+    <main>
+        <div class="hero">
+            <div class="headline">
+                <h2>Hai, I'm nbert.</h2>
+                <p>Dutch amateur web developer and resident of the internet<p>
+            </div>
+            <div class="scrollreminder">
+                <span class="mouse">
+                    <span class="mouse-wheel"></span>
+                </span>
+                <p>Scroll Down</p>
+            </div>
         </div>
     </main>
     <section class="under-fold">
         <h3 class="subheader">Projects</h3>
-        <div class="cards">
-            <div class="card-reveal">
+        <div class="cards" id="revealOnScroll">
+            <div>
                 <img src="https://odp.nilsbeerten.nl/assets/favicon.png">
                 <h4>OpenDiscordProfile</h4>
                 <p>Tool for retrieving user information from Discord by ID, and displaying it in a neatly discord-styled profile.</p>
                 <a href="#4">Take me there!</a>
             </div>
-            <div class="card-reveal card-reveal-2">
+            <div>
                 <img src="assets/github_logo_light.png">
                 <h4>Homepage Rewrite</h4>
                 <p>All repositories including this homepage, parts of the backend and more.</p>
                 <a href="#5">Head to the github</a>
             </div>
-            <div class="card-reveal card-reveal-3">
+            <div>
                 <h4>Homepage Rewrite</h4>
             </div>
         </div>
     </section>
     <footer class="footer">
         <div class="copyright">
-            <p>
-                ©️2022 Nils Beerten
-            </p>
+            <p>©️2022 Nils Beerten.</p>
+        </div>
+        <div class="social-icons">
+            <a href="https://twitter.com/nbertn" popup="@nbertn"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://instagram.com/nbertwasntavailable" popup="nbertwasntavailable"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://youtube.com/channel/UC-bj0JxjTzxnL2LSQMEx6MA" popup="nbert"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://github.com/nbeerten" popup="nbeerten"><i class="fa-brands fa-github"></i></a>
+            <a href="https://nilsbeerten.nl/odp/u/nbert/" popup="nbert#2620"><i class="fa-brands fa-discord"></i></a>
         </div>
     </footer>
+    <script src="js/animations.js"></script>
 </body>
 </html>

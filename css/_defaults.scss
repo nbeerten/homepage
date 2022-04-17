@@ -1,0 +1,17 @@
+//! Importing of global variables/settings !//
+@use 'settings' as *;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-main;
+    color: $text-white;
+
+    max-width: 100vw;
+}
+
+:root {
+    background-color: $background-main;
+}

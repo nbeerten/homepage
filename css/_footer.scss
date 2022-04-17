@@ -1,0 +1,19 @@
+//! Importing of global variables/settings !//
+@use 'settings' as *;
+
+footer {
+    background-color: $background-main;
+    margin: 1rem 0 0 0;
+    padding: 1rem $padding-x;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: $border;
+
+    .copyright p {
+        margin: 0;
+        font: 400 1rem $font-main;
+    }
+}

@@ -1,10 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Poppins:ital,wght@0,400;0,500;1,400;1,500&family=Ubuntu+Mono:wght@400;700&display=swap");
-/**
- * Minified by jsDelivr using clean-css v4.2.3.
- * Original file: /npm/modern-normalize@1.1.0/modern-normalize.css
- *
- * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
- */
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 *, ::after, ::before {
   box-sizing: border-box;
@@ -128,59 +122,43 @@ summary {
   display: list-item;
 }
 
-/*# sourceMappingURL=/sm/b8ae781793ee4eb86edef3f2a2ac43a5575d063ed8cd287d7553f9f1b2776616.map */
-.text-reveal {
-  opacity: 0;
-  animation: revealText 0.5s forwards;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-.text-reveal-2 {
+body {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  max-width: 100vw;
+}
+
+:root {
+  background-color: #1e1e1e;
+}
+
+.reveal-active > * {
+  opacity: 0;
+  animation: reveal-active 0.5s forwards;
+}
+.reveal-active > *:nth-child(2) {
   animation-delay: 0.1s;
 }
-
-.text-reveal-3 {
+.reveal-active > *:nth-child(3) {
   animation-delay: 0.2s;
 }
-
-.text-reveal-4 {
+.reveal-active > *:nth-child(4) {
   animation-delay: 0.3s;
 }
-
-@keyframes revealText {
+@keyframes reveal-active {
   from {
-    transform: translateY(1rem);
+    transform: translateX(1rem);
   }
   to {
     opacity: 1;
     transform: none;
   }
 }
-.card-reveal {
-  opacity: 0;
-  animation: revealCard 0.5s forwards;
-}
 
-.card-reveal-2 {
-  animation-delay: 0.2s;
-}
-
-.card-reveal-3 {
-  animation-delay: 0.4s;
-}
-
-.card-reveal-4 {
-  animation-delay: 0.6s;
-}
-
-@keyframes revealCard {
-  from {
-    transform: translateX(2rem);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
 @keyframes move-wheel {
   0% {
     opacity: 0;
@@ -196,14 +174,7 @@ summary {
   }
 }
 /* Navbar Vars */
-/* Homepage Vars */
-*, *::before, *::after {
-  color: #ffffff;
-  font-family: "Poppins", sans-serif;
-  max-width: 100vw;
-}
-
-.nav {
+.navbar {
   width: 100%;
   min-height: 4rem;
   position: fixed;
@@ -216,22 +187,22 @@ summary {
   display: grid;
   grid-template-columns: minmax(4rem, calc(10% - 1.6rem)) 1fr;
 }
-.nav .logo {
+.navbar .logo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.nav .logo h1 {
+.navbar .logo h1 {
   font-family: "Ubuntu Mono", monospace;
   font-weight: 700;
   font-size: 2.5rem;
   margin: 0;
 }
-.nav .items {
+.navbar .items {
   display: flex;
   flex-direction: row;
 }
-.nav .items a {
+.navbar .items a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -241,27 +212,29 @@ summary {
   font-family: "Poppins", sans-serif;
 }
 @media (max-width: 1080px) {
-  .nav .items a {
+  .navbar .items a {
     padding: 0 0;
     flex-grow: 1;
   }
 }
-.nav .items a button {
+.navbar .items a button {
   padding: 0.2rem 0.6rem;
   background-color: hsla(0deg, 0%, 0%, 0);
   border-width: 0px;
   border-radius: 9999px;
   border-style: solid;
   box-shadow: 0 0 0 hsla(0deg, 0%, 0%, 0);
+  color: #ffffff;
   cursor: pointer;
   transition: background-color 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 }
-.nav .items a:hover button {
+.navbar .items a:hover button {
   background-color: hsl(0deg, 0%, 0%);
   box-shadow: 0 0 1rem hsla(0deg, 0%, 0%, 0.5);
 }
 
-.main {
+/* Homepage Vars */
+.hero {
   width: 100%;
   height: 100vh;
   max-height: 100dvh;
@@ -273,7 +246,29 @@ summary {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.main .headline h2 {
+.hero .headline > * {
+  opacity: 0;
+  animation: reveal-u0h0etm 0.5s forwards;
+}
+.hero .headline > *:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.hero .headline > *:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.hero .headline > *:nth-child(4) {
+  animation-delay: 0.3s;
+}
+@keyframes reveal-u0h0etm {
+  from {
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.hero .headline h2 {
   font-family: "Ubuntu Mono", monospace;
   font-size: 3em;
   font-weight: 700;
@@ -283,17 +278,17 @@ summary {
   border-bottom: 1px solid hsla(0deg, 0%, 100%, 0.2);
 }
 @media (max-width: 1080px) {
-  .main .headline h2 {
+  .hero .headline h2 {
     font-size: calc(1rem + 5vw);
   }
 }
-.main .headline p {
+.hero .headline p {
   margin: 0.5em 0;
   font-family: "Ubuntu Mono", monospace;
   font-size: 1.2em;
   font-weight: 400;
 }
-.main .scrollreminder {
+.hero .scrollreminder {
   position: absolute;
   bottom: 2%;
   left: 50%;
@@ -302,7 +297,7 @@ summary {
   align-items: center;
   flex-direction: column;
 }
-.main .scrollreminder .mouse {
+.hero .scrollreminder .mouse {
   width: 1.5rem;
   height: 3rem;
   border: 2px solid white;
@@ -311,7 +306,7 @@ summary {
   justify-content: center;
   align-items: center;
 }
-.main .scrollreminder .mouse .mouse-wheel {
+.hero .scrollreminder .mouse .mouse-wheel {
   display: block;
   width: 10px;
   height: 10px;
@@ -319,7 +314,7 @@ summary {
   border-radius: 50%;
   animation: move-wheel 2s ease-in-out infinite;
 }
-.main .scrollreminder p {
+.hero .scrollreminder p {
   font-size: 0.8em;
   font-family: "Ubuntu Mono", monospace;
   margin: 0;
@@ -396,6 +391,7 @@ summary {
   grid-row: 3/4;
   grid-column: 2/3;
   background-color: #1e1e1e;
+  color: #ffffff;
   border-radius: 0.25rem;
   border: none;
   padding: 0.25rem 1rem;
@@ -405,6 +401,48 @@ summary {
   content: "\f08e";
   font: var(--fa-font-solid);
   margin-left: 0.5rem;
+}
+
+footer {
+  background-color: #1e1e1e;
+  margin: 1rem 0 0 0;
+  padding: 1rem 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid hsla(0deg, 0%, 100%, 0.2);
+}
+footer .copyright p {
+  margin: 0;
+  font: 400 1rem "Poppins", sans-serif;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+}
+.social-icons a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+  padding: 0.4rem;
+}
+.social-icons a::after {
+  content: "";
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+.social-icons a:hover::after {
+  content: attr(popup);
+  opacity: 1;
+  position: absolute;
+  top: -55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000000;
+  padding: 0.4rem 1rem;
+  border-radius: 0.25rem;
 }
 
 /*# sourceMappingURL=output.css.map */

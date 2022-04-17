@@ -1,0 +1,59 @@
+@use "sass:string" as string;
+
+@mixin reveal($axis: Y, $duration: 0.5s, $travel: 1rem, $step: 1s, $unique: string.unique-id()) {
+    > * {
+        opacity: 0;
+        animation: reveal-+$unique $duration forwards;
+
+        &:nth-child(2) { animation-delay: $step * 1; }
+        &:nth-child(3) { animation-delay: $step * 2; }
+        &:nth-child(4) { animation-delay: $step * 3; }
+    }
+
+    @keyframes reveal-#{$unique} {
+        from{
+            transform: translate#{$axis}($travel);
+        }
+        to{
+            opacity: 1;
+            transform: none;
+        }
+    }
+}
+
+.reveal-active {
+    > * {
+        opacity: 0;
+        animation: reveal-active 0.5s forwards;
+
+        &:nth-child(2) { animation-delay: .1s; }
+        &:nth-child(3) { animation-delay: .2s; }
+        &:nth-child(4) { animation-delay: .3s; }
+    }
+
+    @keyframes reveal-active {
+        from{
+            transform: translateX(1rem);
+        }
+        to{
+            opacity: 1;
+            transform: none;
+        }
+    }
+}
+
+
+@keyframes move-wheel {
+    0% {
+        opacity: 0;
+        transform: translateY(0.7rem);
+    }
+    20% {
+        opacity: 0;
+        transform: translateY(0.7rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-0.7rem);
+    }
+}

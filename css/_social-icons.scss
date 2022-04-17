@@ -1,0 +1,34 @@
+//! Importing of global variables/settings !//
+@use 'settings' as *;
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+
+    a {
+        display: block;
+        color: $text-white;
+        text-decoration: none;
+        position: relative;
+        padding: 0.4rem;
+
+        &::after {
+            content: "";
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+        &:hover::after {
+            content: attr(popup);
+            opacity: 1;
+
+            position: absolute;
+            top: -55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            background-color: $background-secondary;
+            padding: 0.4rem 1rem;
+            border-radius: 0.25rem;
+        }
+    }
+}
