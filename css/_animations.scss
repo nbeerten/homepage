@@ -11,10 +11,10 @@
     }
 
     @keyframes reveal-#{$unique} {
-        from{
+        from {
             transform: translate#{$axis}($travel);
         }
-        to{
+        to {
             opacity: 1;
             transform: none;
         }
