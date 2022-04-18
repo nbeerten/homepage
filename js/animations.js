@@ -2,7 +2,7 @@ var animations = {
     reveal: function() {
         var reveals = document.querySelectorAll("#revealOnScroll");
         for (var i = 0; i < reveals.length; i++) {
-            var windowHeight = window.innerHeight;
+            var windowHeight = window.outerHeight;
             var elementTop = reveals[i].getBoundingClientRect().top;
             var elementVisible = 0;
             if (elementTop < windowHeight - elementVisible) {
