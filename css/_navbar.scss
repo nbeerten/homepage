@@ -3,11 +3,14 @@
 
 /* Navbar Vars */
 $nav-background: hsla(0, 0%, 10%, 0.3);
+$nav-backdrop-filter: blur(8px);
 $nav-border: $border;
 
 .navbar {
     width: 100%;
     min-height: 4rem;
+
+    transition: max-height .1s ease-in-out;
 
     position: fixed;
     top: 0;
@@ -15,7 +18,7 @@ $nav-border: $border;
     z-index: 999;
 
     background-color: $nav-background;
-    backdrop-filter: blur(8px);
+    backdrop-filter: $nav-backdrop-filter;
     border-bottom: $nav-border;
 
     display: grid;
@@ -34,9 +37,14 @@ $nav-border: $border;
         }
     }
 
+    #toggler, label {
+        display: none;
+    }
+
     .items {
         display: flex;
         flex-direction: row;
+        
         a {
             display: flex;
             align-items: center;
@@ -47,10 +55,6 @@ $nav-border: $border;
             text-decoration: none;
             font-family: $font-main;
 
-            @media (max-width: 1080px) {
-                padding: 0 0;
-                flex-grow: 1;
-            }
             button {
                 padding: 0.2rem 0.6rem;
                 background-color: hsla(0, 0%, 0%, 0);
@@ -68,6 +72,36 @@ $nav-border: $border;
                 background-color: hsla(0, 0%, 0%, 1);
                 box-shadow: 0 0 1rem hsla(0, 0%, 0%, 0.5);
             }
+        }
+    }
+
+    /* Mobile */
+    @media screen and (max-width: 800px){
+        grid-template-rows: min(4rem) auto;
+
+        label {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            padding: 1rem 2rem;
+
+            i {
+                font-size: 1.8rem;
+            }
+        }
+        .items {
+            flex-direction: column;
+            grid-column: span 2;
+            height: 0;
+            overflow: hidden;
+
+            a {
+                padding: 0.3rem 1rem;
+            }
+        }
+
+        #toggler:checked ~ .items {
+            height: 100%;
         }
     }
 }
