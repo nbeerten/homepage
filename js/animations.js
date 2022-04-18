@@ -2,9 +2,9 @@ var animations = {
     reveal: function() {
         var reveals = document.querySelectorAll("#revealOnScroll");
         for (var i = 0; i < reveals.length; i++) {
-            var windowHeight = window.outerHeight;
+            var windowHeight = window.innerHeight;
             var elementTop = reveals[i].getBoundingClientRect().top;
-            var elementVisible = 0;
+            var elementVisible = -10;
             if (elementTop < windowHeight - elementVisible) {
                 reveals[i].classList.add("reveal-active");
             } else {
