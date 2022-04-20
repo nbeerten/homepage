@@ -15,3 +15,19 @@ body {
 :root {
     background-color: $background-main;
 }
+
+img.img-failedload {
+    background: linear-gradient(135deg, rgba(125,125,125,1) 0%, rgba(156,156,156,1) 33%, rgba(168,168,168,1) 66%, rgba(74,74,74,1) 100%);
+    border-radius: 0.25rem;
+
+    position: relative;
+    &::after {
+        content: "Couldn't load image";
+        text-align: center;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
