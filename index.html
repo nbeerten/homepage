@@ -16,23 +16,26 @@
         <input type="checkbox" id="toggler">
         <label for="toggler"><i class="fa-solid fa-bars"></i></label>
         <div class="items">
-            <a href="#1">
+            <a href="#home">
                 <button>Home</button>
             </a>
-            <a href="#2">
+            <a href="#projects">
                 <button>Projects</button>
-            </a>
-            <a href="#3">
-                <button>About</button>
             </a>
         </div>
     </nav>
     <main>
-        <div class="hero">
+        <div class="hero" id="home">
             <div class="headline">
                 <h2>Hai, I'm nbert.</h2>
                 <p>Dutch amateur web developer and resident of the internet</p>
-                <p></p>
+                <div class="social-icons">
+                    <a href="https://twitter.com/nbertn" popup="@nbertn"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://instagram.com/nbertwasntavailable" popup="nbertwasntavailable"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://youtube.com/channel/UC-bj0JxjTzxnL2LSQMEx6MA" popup="nbert"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://github.com/nbeerten" popup="nbeerten"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://nilsbeerten.nl/odp/u/nbert/" popup="nbert#2620"><i class="fa-brands fa-discord"></i></a>
+                </div>
             </div>
 
             <div class="scrollreminder">
@@ -41,7 +44,7 @@
             </div>
         </div>
     </main>
-    <section class="under-fold">
+    <section class="under-fold" id="projects">
         <h3 class="subheader">Projects</h3>
         <div class="cards">
             <div>
@@ -59,15 +62,49 @@
         </div>
     </section>
     <footer class="footer">
-        <div class="copyright">
-            <p>©️2022 Nils Beerten.</p>
+        <div class="top">
+            <div class="contact">
+                <h4>Contact</h4>
+                <address>
+                    <ul>
+                        <li><a href="https://twitter.com/nbertn">Twitter</a></li>
+                        <li><a href="https://nilsbeerten.nl/odp/u/nbert/">Discord</a></li>
+                    </ul>
+                </address>
+            </div>
+            <div>
+                <h4>Pages</h4>
+                <ul>
+                    <li><a href="/">Homepage</a></li>
+                    <li><a href="https://odp.nilsbeerten.nl/">OpenDiscordProfile</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Github repositories</h4>
+                <ul>
+                    <li><a href="https://github.com/nbeerten/homepage">Homepage Rewrite</a></li>
+                    <li><a href="https://github.com/nbeerten/odp.nilsbeerten.nl">odp.nilsbeerten.nl</a></li>
+                    <li><a href="https://github.com/nbeerten/api.nilsbeerten.nl">API (For private use)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Miscellaneous</h4>
+                <ul>
+                    <li><a href="https://trackmania.exchange/ms?authorid=41263">Trackmania Maps</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="social-icons">
-            <a href="https://twitter.com/nbertn" popup="@nbertn"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://instagram.com/nbertwasntavailable" popup="nbertwasntavailable"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://youtube.com/channel/UC-bj0JxjTzxnL2LSQMEx6MA" popup="nbert"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://github.com/nbeerten" popup="nbeerten"><i class="fa-brands fa-github"></i></a>
-            <a href="https://nilsbeerten.nl/odp/u/nbert/" popup="nbert#2620"><i class="fa-brands fa-discord"></i></a>
+        <div class="bottom">
+            <div class="copyright">
+                <p>©️2022 Nils Beerten.</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://twitter.com/nbertn" popup="@nbertn"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://instagram.com/nbertwasntavailable" popup="nbertwasntavailable"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://youtube.com/channel/UC-bj0JxjTzxnL2LSQMEx6MA" popup="nbert"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://github.com/nbeerten" popup="nbeerten"><i class="fa-brands fa-github"></i></a>
+                <a href="https://nilsbeerten.nl/odp/u/nbert/" popup="nbert#2620"><i class="fa-brands fa-discord"></i></a>
+            </div>
         </div>
     </footer>
     <script src="js/main.js"></script>

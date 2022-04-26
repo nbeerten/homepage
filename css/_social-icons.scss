@@ -12,6 +12,10 @@
         position: relative;
         padding: 0.4rem;
 
+        &:first-child {
+            margin-left: -0.4rem;
+        }
+
         &::after {
             content: "";
             opacity: 0;

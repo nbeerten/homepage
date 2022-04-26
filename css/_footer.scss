@@ -2,18 +2,67 @@
 @use 'settings' as *;
 
 footer {
-    background-color: $background-main;
-    margin: 1rem 0 0 0;
-    padding: 1rem $padding-x;
+    .top {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+        @media screen and (max-width: 800px) {
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto auto;
+            row-gap: 1rem;
+            padding-bottom: 1rem;
+        }
+        
+        width: 100%;
+        padding: 1rem $padding-x 0;
+        margin-top: 1rem;
 
-    border-top: $border;
+        border-top: $border;
+        > div {
+            width: 100%;
+            h4 {
+                font-size: 1.1rem;
+                font-weight: 500;
+                margin: 0;
+                padding: 0.5rem 0;
+            }
+            ul {
+                list-style: none;
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                
+                li a {
+                    color: darken($text-white, 5);
+                    font-size: 0.95rem;
+                    text-decoration: none;
+                    text-emphasis: none;
+                    font-style: normal;
+                    padding: 0.25rem 0;
+                    display: block;
+                    width: max-content;
 
-    .copyright p {
-        margin: 0;
-        font: 400 1rem $font-main;
+                    &:hover {
+                        text-decoration: underline;
+
+                    }
+                }
+            }
+        }
+    }
+    .bottom {
+        background-color: $background-main;
+        padding: 1rem $padding-x;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        .copyright p {
+            margin: 0;
+            font: 400 1rem $font-main;
+        }
     }
 }
