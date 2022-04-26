@@ -4,7 +4,7 @@
 .social-icons {
     display: flex;
     flex-direction: row;
-
+    
     a {
         display: block;
         color: $text-white;
@@ -15,16 +15,19 @@
         &::after {
             content: "";
             opacity: 0;
-            transition: opacity 0.2s ease-in-out;
+            display: block;
+            position: absolute;
+            top: -50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%) scale(0);
+            transform-origin: bottom;
+            transition: opacity 0.2s ease-in-out, transform 0.1s ease-in-out;
         }
         &:hover::after {
             content: attr(popup);
             opacity: 1;
-
-            position: absolute;
-            top: -55%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%) scale(1);
 
             background-color: $background-secondary;
             padding: 0.4rem 1rem;
