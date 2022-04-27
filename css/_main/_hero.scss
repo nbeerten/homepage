@@ -1,0 +1,82 @@
+//! Importing of global variables/settings !//
+@use '../settings' as *;
+@use '../animations' as animations;
+
+/* Homepage Vars */
+$main-background: url(/assets/background.jpg);
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    max-height: 100dvh;
+    position: relative;
+
+    display: grid;
+    place-items: center left;
+
+    padding: 0 $padding-x;
+
+    background-image: $main-background;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .headline {
+        @include animations.reveal(Y, 0.5s, 1rem, 0.1s);
+
+        h2 {
+            font-family: $font-mono;
+            font-size: 3em;
+            font-weight: 700;
+
+            width: max-content;
+            margin: 0;
+            padding-bottom: 0.3rem;
+
+            border-bottom: 1px solid hsla(0, 0%, 100%, 0.2);
+
+            @media (max-width: 1080px) { 
+                font-size: calc(1rem + 5vw);
+            }
+        }
+        p {
+            margin: 0.5em 0;
+            font-family: $font-mono;
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+    }
+    .scrollreminder {
+        position: absolute;
+        bottom: 2%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .mouse {
+            width: 1.5rem;
+            height: 3rem;
+            border: 2px solid white;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .mouse-wheel {
+                display: block;
+                width: 10px;
+                height: 10px;
+                background-color: white;
+                border-radius: 50%;
+                animation: move-wheel 2s ease-in-out infinite;
+            }
+        }
+        p {
+            font-size: 0.8em;
+            font-family: $font-mono;
+            margin: 0;
+            margin-top: 1em;
+        }
+    }
+}

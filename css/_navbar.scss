@@ -63,7 +63,7 @@ $nav-border: $border;
                 border-style: solid;
                 
                 box-shadow: 0 0 0 hsla(0, 0%, 0%, 0);
-                color: $text-white;
+                color: $text-main;
                 cursor: pointer;
 
                 transition: background-color 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
@@ -83,7 +83,7 @@ $nav-border: $border;
             display: flex;
             justify-content: right;
             align-items: center;
-            padding: 1rem 2rem;
+            padding: 1rem 1.3rem;
 
             i {
                 font-size: 1.8rem;

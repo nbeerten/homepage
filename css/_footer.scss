@@ -17,7 +17,8 @@ footer {
         width: 100%;
         padding: 1rem $padding-x 0;
         margin-top: 1rem;
-
+        
+        background-color: $background-main;
         border-top: $border;
         > div {
             width: 100%;
@@ -34,7 +35,7 @@ footer {
                 margin: 0;
                 
                 li a {
-                    color: darken($text-white, 5);
+                    color: $text-main;
                     font-size: 0.95rem;
                     text-decoration: none;
                     text-emphasis: none;
@@ -58,7 +59,6 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
 
         .copyright p {
             margin: 0;
