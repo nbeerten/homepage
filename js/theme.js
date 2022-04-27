@@ -9,7 +9,7 @@ var theme = {
                 root.setAttribute('theme', 'light');
                 break;
             default:
-                root.setAttribute(theme, 'dark');
+                root.setAttribute('theme', 'dark');
                 break;
         }
     },
@@ -20,7 +20,7 @@ var theme = {
             } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
                 return 'light';
             } else {
-                return 'light';
+                return 'dark';
             }
         }
         return null;
@@ -37,6 +37,16 @@ var theme = {
             date.setTime(date.getTime() + (expDays * 86400000));
             const expires = "expires=" + date.toUTCString();
             document.cookie = this.cookiename + "=" + theme + "; " + expires + "; path=/";
+        }
+    },
+    toggle: function(){
+        var root = document.documentElement;
+        if(root.getAttribute('theme') === 'dark'){
+            root.setAttribute('theme', 'light')
+        } else if(root.getAttribute('theme') === 'light') {
+            root.setAttribute('theme', 'dark')
+        } else {
+            root.setAttribute('theme', 'dark')
         }
     }
 }
