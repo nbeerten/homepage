@@ -22,6 +22,7 @@ $main-background: url(/assets/background.jpg);
 
     .headline {
         @include animations.reveal(Y, 0.5s, 1rem, 0.1s);
+        color: $text-darkbg;
 
         h2 {
             font-family: $font-mono;
@@ -44,6 +45,9 @@ $main-background: url(/assets/background.jpg);
             font-size: 1.2em;
             font-weight: 400;
         }
+        .social-icons a {
+            color: $text-darkbg;
+        }
     }
     .scrollreminder {
         position: absolute;
@@ -54,6 +58,7 @@ $main-background: url(/assets/background.jpg);
         align-items: center;
         flex-direction: column;
 
+        color: $text-darkbg;
         .mouse {
             width: 1.5rem;
             height: 3rem;

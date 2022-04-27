@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./dist/output.css">
-    <script src="https://kit.fontawesome.com/946855d216.js" crossorigin="anonymous"></script>
 
     <title>Homepage Rewrite</title>
 
@@ -24,6 +23,7 @@
             <a href="#projects">
                 <button>Projects</button>
             </a>
+            <button id="themetoggler"></button>
         </div>
     </nav>
     <main>
@@ -56,7 +56,7 @@
                 <a href="#4">Take me there!</a>
             </div>
             <div>
-                <img loading="lazy" src="assets/github_logo_light.png" onerror="this.classList.add('img-failedload')">
+                <img loading="lazy" src="assets/github_logo_light.png" onerror="this.classList.add('img-failedload')" style="filter: var(--image-coloradjust1)">
                 <h4>Homepage Rewrite</h4>
                 <p>All repositories including this homepage, parts of the backend and more.</p>
                 <a href="#5">Head to the github</a>

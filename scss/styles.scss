@@ -11,4 +11,9 @@
     @use '_main/under-fold';
 @use 'footer';
 @use 'social-icons';
+
+/* Fontawesome */
+@import "_fa/fontawesome.scss";
+@import "_fa/solid.scss";
+@import "_fa/brands.scss";
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Poppins:ital,wght@0,400;0,500;1,400;1,500&family=Ubuntu+Mono:wght@400;700&display=swap');

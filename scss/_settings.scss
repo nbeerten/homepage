@@ -1,6 +1,13 @@
+/* FA setup */
+$fa-font-path: "/dist/webfonts";
+
+/* Styling */
 $background-main: var(--background-main);
 $background-secondary: var(--background-secondary);
 $brand-main: var(--brand-main);
+
+$image-coloradjust1: var(--image-coloradjust1);
+$image-coloradjust2: var(--image-coloradjust2);
 
 $text-white: var(--text-main);
 $text-black: var(--text-darkbg);
@@ -21,9 +28,12 @@ $padding-x: 10%;
     --background-secondary: #000000;
     --brand-main: #ffdd33;
 
+    --image-coloradjust1: invert(0);
+
     --text-main: #ffffff;
-    --text-darkbg: #000000;
+    --text-darkbg: #ffffff;
     --text-lightbg: #000000;
+
 }
 
 :root[theme="light"] {
@@ -31,7 +41,9 @@ $padding-x: 10%;
     --background-secondary: #ffffff;
     --brand-main: #ffdd33;
 
+    --image-coloradjust1: invert(1);
+
     --text-main: #000000;
     --text-darkbg: #ffffff;
-    --text-lightbg: #ffffff;
+    --text-lightbg: #000000;
 }

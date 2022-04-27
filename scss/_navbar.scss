@@ -30,6 +30,7 @@ $nav-border: $border;
         align-items: center;
 
         h1 {
+            color: $text-darkbg;
             font-family: $font-mono;
             font-weight: 700;
             font-size: 2.5rem;
@@ -63,7 +64,7 @@ $nav-border: $border;
                 border-style: solid;
                 
                 box-shadow: 0 0 0 hsla(0, 0%, 0%, 0);
-                color: $text-main;
+                color: $text-darkbg;
                 cursor: pointer;
 
                 transition: background-color 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
@@ -84,6 +85,7 @@ $nav-border: $border;
             justify-content: right;
             align-items: center;
             padding: 1rem 1.3rem;
+            color: $text-darkbg;
 
             i {
                 font-size: 1.8rem;
@@ -103,5 +105,22 @@ $nav-border: $border;
         #toggler:checked ~ .items {
             height: 100%;
         }
+    }
+}
+
+#themetoggler {
+    padding: 0.2rem 0.6rem;
+    background-color: hsla(0, 0%, 0%, 0);
+    border-width: 0px;
+    border-radius: 9999px;
+    border-style: solid;
+    
+    box-shadow: 0 0 0 hsla(0, 0%, 0%, 0);
+    color: $text-darkbg;
+    cursor: pointer;
+
+    &::after {
+        content: 'asdas';
+        color: white;
     }
 }

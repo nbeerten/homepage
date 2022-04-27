@@ -36,8 +36,7 @@
             padding: 0.6rem;
             border: $border;
             border-radius: 0.25rem;
-            background-color: hsla(0, 0%, 5%, 0.3);
-            backdrop-filter: blur(16px);
+            background-color: $background-secondary;
 
             display: grid;
             grid-template-columns: auto 1fr;
@@ -54,6 +53,8 @@
                 padding: 0.5rem;
                 grid-row: 1 / 4;
                 grid-column: 1 / 2;
+
+                
             }
             h4 {
                 grid-row: 1 / 2;
