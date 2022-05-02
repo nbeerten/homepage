@@ -1,0 +1,23 @@
+{
+  "name": "homepage",
+  "version": "1.0.0",
+  "description": "Homepage of nilsbeerten.nl",
+  "scripts": {
+    "scss": "sass scss/styles.scss dist/output.css",
+    "scss--watch": "sass --watch scss/styles.scss dist/output.css",
+    "scss:min": "sass --style=compressed scss/styles.scss dist/output.min.css",
+    "scss:min--watch": "sass --watch --style=compressed scss/styles.scss dist/output.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nbeerten/homepage.git"
+  },
+  "author": "",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "sass": "^1.51.0"
+  },
+  "dependencies": {
+    "modern-normalize": "^1.1.0"
+  }
+}

@@ -43,10 +43,13 @@ var theme = {
         var root = document.documentElement;
         if(root.getAttribute('theme') === 'dark'){
             root.setAttribute('theme', 'light')
+            this.cookie.set('light')
         } else if(root.getAttribute('theme') === 'light') {
             root.setAttribute('theme', 'dark')
+            this.cookie.set('dark')
         } else {
             root.setAttribute('theme', 'dark')
+            this.cookie.set('dark')
         }
     }
 }

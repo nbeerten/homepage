@@ -34,6 +34,7 @@ $padding-x: 10%;
     --text-darkbg: #ffffff;
     --text-lightbg: #000000;
 
+    color-scheme: dark;
 }
 
 :root[theme="light"] {
@@ -46,4 +47,6 @@ $padding-x: 10%;
     --text-main: #000000;
     --text-darkbg: #ffffff;
     --text-lightbg: #000000;
+
+    color-scheme: light;
 }

@@ -1,7 +1,7 @@
+//* Modern Normalize: standardizes CSS across browsers *//
+@use '../node_modules/modern-normalize/modern-normalize.css';
 //! Importing of global variables/settings !//
 @use 'settings' as *;
-//* Modern Normalize: standardizes CSS across browsers *//
-@use 'modern-normalize.css';
 @use 'defaults';
 
 //* Project files *//
