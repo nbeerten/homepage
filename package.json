@@ -6,7 +6,9 @@
     "scss": "sass scss/styles.scss dist/output.css",
     "scss--watch": "sass --watch scss/styles.scss dist/output.css",
     "scss:min": "sass --style=compressed scss/styles.scss dist/output.min.css",
-    "scss:min--watch": "sass --watch --style=compressed scss/styles.scss dist/output.min.css"
+    "scss:min--watch": "sass --watch --style=compressed scss/styles.scss dist/output.min.css",
+    "scss2": "sass --watch scss/styles.scss:dist/output.css scss/styles_def.scss:dist/output_def.css",
+    "scss2:min": "sass --watch --style=compressed scss/styles.scss:dist/output.css scss/styles_def.scss:dist/output_def.css"
   },
   "repository": {
     "type": "git",
