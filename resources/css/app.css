@@ -1,0 +1,40 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "tailwindcss/variants";
+
+@import "~@fontsource/montserrat/variable.css";
+@import "~@fontsource/montserrat/variable-italic.css";
+@import "~@fontsource/fira-code/variable.css";
+
+
+.tooltip:after {
+    content: "";
+    opacity: 0;
+    display: block;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(0);
+    transform-origin: bottom;
+    transition: opacity 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.tooltip:hover::after {
+    content: attr(popup);
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+
+    background-color: #000;
+    padding: 0.4rem 1rem;
+    border-radius: 0.25rem;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
